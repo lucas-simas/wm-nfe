@@ -1,10 +1,10 @@
 {
-    "name": "lucas-simas/nfe-php-sdk",
+    "name": "lucas-simas/wm-nfe",
     "type": "library",
     "license": "GPL-3.0-or-later",
     "description": "Fork do PHP SDK da REST API de NF-e da WebmaniaBR, com timeout configuravel",
     "keywords": ["notafiscal", "api", "nfe", "nfce", "nota fiscal", "nf-e", "nfc-e", "webmaniabr", "sefaz"],
-    "homepage": "https://github.com/lucas-simas/NFe-PHP-SDK",
+    "homepage": "https://github.com/lucas-simas/wm-nfe",
     "require": {
         "php": ">=5.2.0"
     },
