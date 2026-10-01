@@ -292,7 +292,10 @@ class NFe {
         if ($curl_errno){
             $curl_strerror = curl_strerror($curl_errno);
         }
-        curl_close($rest);
+        // curl_close() nao tem efeito desde o PHP 8.0 e foi deprecated no PHP 8.5
+        if (PHP_VERSION_ID < 80000) {
+            curl_close($rest);
+        }
 
         // Get cURL errors
         $curl_error = new StdClass;
@@ -300,10 +303,10 @@ class NFe {
         if ($curl_errno){
 
           // Get User IP
-          $ip = $_SERVER['CF-Connecting-IP']; // CloudFlare
+          $ip = isset($_SERVER['HTTP_CF_CONNECTING_IP']) ? $_SERVER['HTTP_CF_CONNECTING_IP'] : ''; // CloudFlare
 
           if (!$ip){
-            $ip = $_SERVER['REMOTE_ADDR']; // Standard
+            $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''; // Standard
           }
           if (is_array($ip)){
             $ip = $ip[0];
