@@ -1,23 +1,19 @@
 {
-    "name": "webmaniabr/nfe",
+    "name": "lucas-simas/nfe-php-sdk",
     "type": "library",
-    "version": "3.7.0",
     "license": "GPL-3.0-or-later",
-    "description": "PHP SDK da REST API de Nota Fiscal Eletrônica da WebmaniaBR®",
+    "description": "Fork do PHP SDK da REST API de NF-e da WebmaniaBR, com timeout configuravel",
     "keywords": ["notafiscal", "api", "nfe", "nfce", "nota fiscal", "nf-e", "nfc-e", "webmaniabr", "sefaz"],
-    "homepage": "https://webmaniabr.com/docs/rest-api-nfe/",
-    "prefer-stable": true,
+    "homepage": "https://github.com/lucas-simas/NFe-PHP-SDK",
     "require": {
         "php": ">=5.2.0"
     },
-    "require-dev": {
-        "php": ">=5.2.0"
+    "replace": {
+        "webmaniabr/nfe": "*"
     },
     "authors": [
-        {
-            "name": "Equipe WebmaniaBR",
-            "email": "suporte@webmaniabr.com"
-        }
+        { "name": "Equipe WebmaniaBR", "email": "suporte@webmaniabr.com" },
+        { "name": "Lucas Simas", "email": "lucas@tiro.digital" }
     ],
     "autoload": {
         "psr-0": {
