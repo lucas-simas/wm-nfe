@@ -4,6 +4,10 @@
 
 # NF-e PHP SDK
 
+> **Fork** de [webmaniabr/NFe-PHP-SDK](https://github.com/webmaniabr/NFe-PHP-SDK), mantido por Lucas Simas e distribuído como `lucas-simas/wm-nfe`. Este código foi modificado em relação ao original, sob a mesma licença GPL-3.0-or-later.
+>
+> Mudança em relação ao original: timeout das chamadas configurável, via construtor (`new NFe($ck, $cs, $at, $ats, $timeout, $timeoutRapido)`) ou `setTimeout($timeout, $timeoutRapido = null)`. Os padrões continuam 300s para os endpoints gerais e 5s para `/sefaz/` e `/certificado/`.
+
 Através do emissor de Nota Fiscal da Webmania®, você conta com a emissão e arquivamento das suas notas fiscais, cálculo automático de impostos, geração do Danfe para impressão e envio automático de e-mails para os clientes. Realize a integração com o seu sistema utilizando a nossa REST API.
 
 - Emissor de Nota Fiscal Webmania®: [Saiba mais](https://webmaniabr.com/nota-fiscal-eletronica/)
@@ -27,7 +31,7 @@ A SDK está disponível para todos os recursos da versão **3.7.0** da API de No
 Instale o módulo da Webmania® via composer ou baixe nosso repositório e utilize a classe NFe.php que se encontra dentro de src/WebmaniaBR/:
 
 ```php
-composer require webmaniabr/nfe
+composer require lucas-simas/wm-nfe
 ```
 
 Após executar o composer, adicione o require no topo do seu arquivo. Caso tenha baixado manualmente, importe o arquivo NFe.php diretamente na sua aplicação:
